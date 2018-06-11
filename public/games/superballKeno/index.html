@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Slot</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<link rel="stylesheet" href="preloader/main.css" />
+	<link rel="stylesheet" href="main.css" />
+	<link rel="stylesheet" href="../../css/menu.css" />
+	<link rel="stylesheet" href="../../fonts/stylesheet.css" />
+	<link rel="stylesheet" href="fonts/stylesheet.css" />
+	<link rel="stylesheet" href="offline-theme-default.css" />
+	<link rel="stylesheet" href="offline-language-english.css" />
+	<link rel="stylesheet" href="offline-language-english-indicator.css" />
+	<script src="detect.js"></script>
+	<script src="phaser.min.js"></script>
+	<script src="jquery-3.0.0.js"></script>
+	<script src="offline.min.js"></script>
+	<script src="jquery.touchhold.js"></script>
+	<script src="desktop.game1.js"></script>
+	<script src="functions.js"></script>
+	<script src="desktop.begin.js"></script>
+	<script src="desktop.end.js"></script>
+	<style type="text/css">	
+		body{
+			margin: 0;
+			padding: 0;
+			background-color: #000;
+			position: relative;
+		}
+		#spin{
+			display: none;
+		}
+		.font1{
+			font-family: 'JoystixMonospace-Regular';
+			position: absolute;
+			opacity: 0;
+			left: -9999px;
+		}
+		.font2{
+			font-family: 'Xenia';
+			position: absolute;
+			opacity: 0;
+			left: -9999px;
+		}
+		.font3{
+			font-family: 'TR Motor';
+			position: absolute;
+			opacity: 0;
+			left: -9999px;
+		}
+		.font4{
+			font-family: 'DeterminationMonoRUSBYLYAJK';
+			position: absolute;
+			opacity: 0;
+			left: -9999px;
+		}	
+		.font5{
+			font-family: 'Mister Pixel 16 pt - Regular';
+			position: absolute;
+			opacity: 0;
+			left: -9999px;
+		}
+	</style>
+</head>
+<body>
+	<div class="preloader" id="preloader">
+		<div class="loading-text">
+			<span class="loading-text-words">L</span>
+			<span class="loading-text-words">O</span>
+			<span class="loading-text-words">A</span>
+			<span class="loading-text-words">D</span>
+			<span class="loading-text-words">I</span>
+			<span class="loading-text-words">N</span>
+			<span class="loading-text-words">G</span>
+		</div>
+	</div>
+	<div class="vertScreenWrapper" id="vertScreenWrapper">
+		<div class="vertScreen realHeight" id="realHeight">
+		</div>
+	</div>
+	<div class="menu_wrap">
+		<div class="menu_elements close">
+			<ul>
+				<li class="btn_1"></li>
+				<li class="btn_2"></li>
+				<li class="btn_3"></li>
+			</ul>
+		</div>
+		<div class="menu_btn"></div>
+	</div>
+	<div id="spin"></div>
+	<div class="popup add_credits">
+		<div class="popup_inner">
+			<div class="header">
+				<img src="../../images/wallet.png" alt="">
+				<h2>ADD CREDIT</h2>
+			</div>
+			<div class="desc">
+				<span>Available credits: </span>
+				<span class="orange">1,500$</span>
+			</div>
+			<div class="input_wrap">
+				<input type="text" class="input_doll">
+			</div>
+			<div class="pick_dollars">
+				<ul>
+					<li data-value="5">+5$</li>
+					<li data-value="10">+10$</li>
+					<li data-value="25">+25$</li>
+					<li data-value="50">+50$</li>
+					<li data-value="100">+100$</li>
+				</ul>
+			</div>
+			<div class="checkbox_wrap">		
+				<div class="checkbox_width">		
+					<input type="checkbox" id="checkbox_1">
+					<label for="checkbox_1">Bonus request</label>
+				</div>
+			</div>
+			<div class="total_money">
+				<span>Total: </span>
+				<span class="current_money">1,525$</span>
+			</div>
+			<div class="btn_wrap">
+				<button class="btn">CONFIRM</button>
+			</div>
+		</div>
+		<div class="close_popup"></div>
+	</div>
+	<div class="popup popup_exit">
+		<div class="popup_inner">
+			<p>Please choose what to do with the remaining credit?</p>
+			<div class="btn_wrap">
+				<button class="btn collect">Collect to my wallet</button>
+				<button class="btn exit">save to in game wallet</button>
+			</div>
+		</div>
+		<div class="close_popup"></div>
+	</div>
+	<div class="overlay"></div>
+	<div class="font1">-</div>
+	<div class="font2">-</div>
+	<div class="font3">-</div>
+	<div class="font4">-</div>
+	<div class="font5">-</div>
+	<style>
+		#spin{
+			font-size: 40px;
+			position: absolute;
+			right: 0px;
+			top: 50%;
+			width: 90px;
+			height: 78px;
+			margin-top: -39px;
+			background: transparent url('img/mobile/spin.png') 0 0 no-repeat;
+			cursor: pointer;
+		}
+		#spin:active{
+			background: transparent url('img/mobile/spin_p.png') 0 0 no-repeat;
+		}
+		#spin.auto{
+			font-size: 40px;
+			position: absolute;
+			right: 0px;
+			top: 50%;
+			width: 90px;
+			height: 78px;
+			margin-top: -39px;
+			background: transparent url('img/mobile/auto.png') 0 0 no-repeat;
+		}
+		#spin.auto:active{
+			background: transparent url('img/mobile/auto_p.png') 0 0 no-repeat;
+		}
+	</style>
+	<script>
+		$(document).ready(function(){
+			function checkWidth() {
+				if (isMobile) {
+					var realWidth = Math.max(
+						document.body.offsetWidth, document.documentElement.offsetWidth,
+						document.body.clientWidth, document.documentElement.clientWidth
+						);
+					var realHeight = document.documentElement.clientHeight;
+					if (realWidth < realHeight) {
+						document.getElementById('vertScreenWrapper').style.display = 'block';
+
+					} else {
+						document.getElementById('vertScreenWrapper').style.display = 'none';
+					}
+				}
+				var halfrealWidth = realWidth/2;
+				var coefHW = 1024/785;
+				var halfCanvasWidth = realHeight*coefHW/2;
+				if((halfrealWidth-halfCanvasWidth) >= 90){
+					$('#spin').css({
+						right: 0,
+						left: halfrealWidth+halfCanvasWidth +'px'						
+					});
+				} else {
+					$('#spin').css({
+						left: 'auto',
+						right: 0
+						
+					});
+				}
+			}
+			window.addEventListener('resize', checkWidth);
+			window.addEventListener('orientationchange', checkWidth);
+			checkWidth();
+			if (isMobile) {
+				window.addEventListener("touchend", touchUpdate);
+				function touchUpdate() {
+					if(document.documentElement.requestFullScreen) {
+						document.documentElement.requestFullScreen();
+					} else if(document.documentElement.mozRequestFullScreen) {
+						document.documentElement.mozRequestFullScreen();
+					} else if(document.documentElement.webkitRequestFullScreen) {
+						document.documentElement.webkitRequestFullScreen();
+					}
+				}
+			}
+		});
+	</script>
+	<script>
+		$(document).ready(function() {
+			$('.pick_dollars li').click(function(event) {
+				$('.input_doll').val()
+				if ($('.input_doll').val() == "") {
+					$('.input_doll').val(+$(this).data('value'))
+				} else {
+					$('.input_doll').val(+$('.input_doll').val()+ +$(this).data('value'))
+				}
+			});
+			$('.close_popup, .overlay').click(function(event) {
+				$('.add_credits,.overlay, .popup_exit').hide();
+			});
+			$('.popup_exit .collect').click(function(event) {
+				$('.add_credits,.overlay, .popup_exit').hide();
+				coinAnim();
+				giveBalance();
+			});
+			$('.popup_exit .exit').click(function(event) {
+				location.href = '/';
+			});
+			$('body').on('click', '#spin', function () {
+				if(autostart === false){
+					startAuto();
+				} else {
+					autostart = false;
+					auto_play.loadTexture('auto_play'); 
+					$(this).removeClass('auto');
+					if (game1.spinStatus === true){
+						hideButtons();
+					}
+				}
+			});
+			$("#spin").touchhold(function() {
+				if(autostart === false){
+					auto_play.loadTexture('auto_stop'); 
+					autostart = true;
+					$(this).addClass('auto');
+					startAuto();
+				} else {
+					auto_play.loadTexture('auto_play'); 
+					autostart = false;
+					$(this).removeClass('auto');
+					if (game1.spinStatus === true){
+						hideButtons();
+					}
+				}
+			});
+			$("canvas").bind('mousedown touchstart', function(event) {
+				mouseDownStatus = true;
+			});
+			$("body").bind('mouseup touchend', function(event) {
+				mouseDownStatus = false;
+			});
+		});
+	</script>
+	<script src="../../js/menu.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+Main game
+1. Insert money to obtain credits. Maximum win play is: 2500. Featue game win count as 1 play. Maximum credits are 3500. Maximum ticket out 3500.
+2. Select how many credit you with to wager per lne by pressing one of the bet buttons.
+3. Select how many paylnes you wish yo play by pressrig one of the lines buttons.
+4. Press the start button to spin the reels.
+5. After reels have finished spinning you will be paid credits in accordance to the paytable.
+
+Random jackpot:
+Mini 10-40, minor 50-200, major 250-500, big daddy 500-1000
+- Players must play a minimum of 0.5 credits to be qualified for the random jackpot.
+- There are 4 jackpot levels: mini, minor, major, bigdaddy.
+- When the random jackpot is hit, you will spin a wheel to determine which Jackpot you won.
+- The jackpot prize amount is awarded and the winning amount is added to your credits.
+
+Bonus feature game:
+- Plays a minimum of 0.5 credits to be qualified for the feature game.
+- You win the feature whenever 3 or more rooster symbols land on the reels.
+- The feature screen will have 5 gentlemen and 5 ladies.
+- Clicking on a lady will reveal the free game multiplipiier (1,2,3,4,5)
+- Clicking on a gentleman will reveal how many free spins (up to 50)
+- When the feature is done choose to replay. Keep your prize, or try the random prize
+
+
+
+Основная игра
+1. Вставьте деньги для получения кредитов. Максимальная победная игра: 2500. Победа в игре Feature равна 1 игре. Максимальный размер кредитов - 3500. Максимальный размер абонемента - 3500.
+2. Выберите, сколько кредитов вам нужно сделать, нажав одну из кнопок ставок.
+3. Выберите количество платежей, которые вы хотите сыграть, нажав одну из кнопок линий.
+4. Нажмите кнопку запуска, чтобы вращать барабаны.
+5. После того, как барабаны закончат вращение, вам будут выплачены кредиты в соответствии с таблицей выплат.
+
+Случайный джекпот:
+Mini 10-40, малый 50-200, майор 250-350, большой папа 500-1000
+- Игроки должны сыграть минимум 0,5 кредита, чтобы получить квалификацию для случайного джекпота.
+- Есть 4 уровня джекпота: мини, минор, майор, bigdaddy.
+- Когда случайный джекпот попал, вы будете вращать колесо, чтобы определить, какой Джекпот вы выиграли.
+- Сумма награды джекпота присуждается, и сумма выигрыша добавляется к вашим кредитам.
+1. При кручении автомата в джекпоты (в бд) заносится равными частями суммы "ставка"/200
+2. Выводится информация о джекпотах с округлением в меньшую сторону по центам
+3. При достижении максимального значения джекпота данной категории, рост прекращается
+4. Дробные центы остаются после выплаты джекпота в БД и продолжают копиться
+5. Ставкой считается общая сумма поставленных денег за ход
+6. Во время фриспинов не накапливается
+
+Бонусная игра:
+- Играет минимум 0,5 кредита, которые должны быть квалифицированы для игровой возможности.
+- Вы выигрываете эту функцию, когда на барабанах приземляются 3 или более символа петуха.
+- Экран функции будет содержать 5 джентльменов и 5 дам.
+- Нажав на леди, вы увидите бесплатный мультиплеер (1,2,3,4,5)
+- Нажав джентльмена, вы узнаете, сколько бесплатных вращений (до 50)
+- Когда функция выполнена, выберите воспроизведение. Держите свой приз или попробуйте случайный приз
+
+
+- Фриспины можно после первого раза перезапустить. Или взять рандомный призЮ или просто забрать выигрыш
+- Джекпот выпадает рандомно и когда выпадает, то выигрышь по слотам плюсуется перед этим к балансу.
+- Джокеры не дополняют питухов
+- во время фриспинов фриспины выпасть не могут
+- Петухи для выигрыша могут находится в любой части экрана. За них дают выигрышь и + может начаться бонусная игра
+- В игре с картами можно выбирать масть (x4), либо цвет (x2). Максимум может быть 5 выигрышей
+- При выпадении фриспина выигрышь за петухов попадает в allWin в freeSpinData.
+
+
+Jackpots is 4.25% from the total bet, that is mean of $100,000 BET the game will pay $4250 in jackpots.
+Bonus is around 13.25% from the total bet so of $100,000 BET the game will pay $13,250 in Free-Spins.
+Джекпоты составляют 4,25% от общей ставки, то есть средняя ставка в размере 100 000 долларов США,
+игра будет выплачиваться в джек-пот в размере 4250 долларов.
+Бонус составляет около 13,25% от общей ставки, так что ставка в размере 100 000 долларов США будет выплачивать 13,250
+ долларов в бесплатных играх. И слоты отдают 75% (Андрей)

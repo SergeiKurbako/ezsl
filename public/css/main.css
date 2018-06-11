@@ -1,0 +1,1046 @@
+html {
+	-ms-overflow-style: scrollbar;
+	-webkit-tap-highlight-color: transparent;
+	font-size: 14px;
+}
+body {
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+	line-height: 14px;
+	font-size: 14px;
+	color: #333;
+	background-color: #fff;
+	-webkit-font-smoothing: antialiased;
+}
+*{
+	box-sizing: border-box;	
+	margin: 0;
+	padding: 0;
+}
+a {
+	color: #fff;
+	text-decoration: none;
+}
+.clearfix::after{
+	content: '';
+	display: table;
+	clear: both;
+}
+header {
+	top: 0;
+	z-index: 50;
+	width: 100%;
+	position: relative;
+	background: #1f294a;
+	border-bottom: solid 2px transparent;
+	height: 45px;
+	padding: .6rem 0 .3rem;
+}
+header .logo{
+	font-size: 29px;
+	line-height: 29px;
+	font-weight: 300;
+}
+.right-block{
+	float: right;
+}
+.btn{
+	display: inline-block;
+	font-weight: 500;
+	line-height: 1.286rem;
+	text-align: center;
+	white-space: nowrap;
+	cursor: pointer;
+	user-select: none;
+	border: 1px solid transparent;
+	padding: .4286rem .8571rem;
+	border-radius: 5px;
+	transition: all .2s ease-in-out;
+}
+.account-btn, .language_wrap{
+	float: left;
+}
+.account-btn .btn{
+	margin-left: 0;
+	margin-right: 6px;
+	font-size: 1rem;
+	line-height: 1rem;
+	border: 0;
+}
+.account-btn .btn:before {
+	padding: 0 14px 0 0;
+	margin-right: 10px;
+	border-right: 1px solid;
+	font-size: .85rem;
+}
+.btn-login{	
+	color: #1f294a;
+	text-shadow: 0 0 4px #fff;
+	box-shadow: 0 1px 0 0 #a0a5b9;
+	background: linear-gradient(to bottom,#eaf1fa 0,#c3cee0 100%);
+}
+.btn-login:hover {
+	box-shadow: 0 1px 0 0 #52586e;
+	background: linear-gradient(to bottom,#eaf1fa 0,#a6b7d3 100%);
+}
+.btn-login:before {
+	font-family: FontAwesome;
+	content: "\f023";
+}
+.btn-reg{
+	color: #fff;
+	text-shadow: 0 0 4px #628e0d;
+	box-shadow: 0 1px 0 0 #2b8142;
+	background: linear-gradient(to bottom,#6ecb86 0,#3caf59 100%);
+}
+.btn-reg:hover {
+	box-shadow: 0 1px 0 0 #264403;
+	background: linear-gradient(to bottom,#6ecb86 0,#289a45 100%);
+}
+.btn-reg:before {
+	font-family: FontAwesome;
+	content: "\f040";
+}
+.language_wrap a{
+	display: inline;
+	position: relative;
+	border: 0;
+	border-radius: 3px;
+	float: left;
+	padding-left: .3rem;
+	padding-right: .3rem;
+	margin-right: 0;
+	height: calc(1.286rem + .4286rem + .4286rem);
+	box-sizing: border-box;
+}
+.language_wrap a:hover{
+	background-color: #52586e;
+}
+.language_wrap .flag_wrap{
+	padding: .1rem;
+	height: 100%;
+	box-sizing: border-box;
+} 
+.language_wrap .flag{
+	margin-right: 8px;
+	float: left;
+	display: inline-block;
+	background: url('/images/flag-sprite-small.png');
+	background-size: calc(calc(1.286rem + .4286rem + .4286rem) - 1 * .1429rem);
+	height: calc(calc(1.286rem + .4286rem + .4286rem) - 1 * .1429rem);
+	width: calc(calc(1.286rem + .4286rem + .4286rem) - 1 * .1429rem);
+}
+.flag_en{
+	background-position: 0 0;
+}
+.language_wrap .language_value{
+	display: inline-block;
+	color: #fede00;
+	font-size: .9286rem;
+	font-weight: 200;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.main-nav{
+	border-top: 1px solid #fff;
+	background: #ddd;
+}
+.main-nav ul{
+	margin: 0 auto;
+	display: table;
+	width: 100%;
+	padding: 0;
+}
+.content{
+	max-width: 1186px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+.main-nav li:first-child {
+	border-left: 1px solid #fff;
+}
+.main-nav li {
+	list-style: none;
+	display: table-cell;
+	position: relative;
+}
+.main-nav a {
+	display: block;
+	white-space: nowrap;
+	height: auto;
+	position: relative;
+	font-weight: 700;
+	text-align: center;
+	text-transform: uppercase;
+	border-right: 1px solid #fff;
+	color: #333;
+	padding: 47px 20px 10px;
+	font-size: .9em;
+}
+.main-nav a.active {
+	background: #fff;
+	color: #1f294a;
+}
+.main-nav  a .icon {
+	position: absolute;
+	right: 0;
+	left: 0;
+	top: 6px;
+	padding: 8px;
+	font-size: 1.4em;
+	display: block;
+	transition: all,.3s,ease-in-out;
+}
+.main-nav  a:hover .icon {
+	top: 15px;
+}
+.games-section{
+	margin-top: 20px;
+}
+.games-section .games-list {
+	width: 100%;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.games-section .game-item {
+	width: 20%;
+	padding: .4em;
+	float: left;
+	list-style: none;
+}
+.game-item a {
+	float: left;
+	width: 100%;
+	position: relative;
+	padding: 1px 1px 0;
+}
+.game-item i.fa-mobile {
+	position: absolute;
+	padding: 2px 5px;
+	font-size: 2em;
+	border-radius: 0 0 5px;
+	z-index: 1;
+	background: rgba(65,76,88,.9);
+	color: #fff;
+	display: none;
+}
+.game-item .game-img {
+	height: 0;
+	padding-bottom: 59%;
+	position: relative;
+	overflow: hidden;
+}
+.game-item .game-wrapper, .game-item a img {
+	width: 100%;
+	// height: 132px;
+}
+.game-item .game-name {
+	color: #020202;
+	font-weight: 600;
+	text-align: left;
+	position: relative;
+	padding: 10px 0 1px 1px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	font-size: 1rem;
+	line-height: 1.4;
+	margin: 0;
+}
+.game-item .hover {
+	display: block;
+	text-align: center;
+	position: absolute;
+	opacity: 0;
+	transition: opacity .2s ease-out;
+	width: 100%;
+	top: 0;
+	left: 0;
+	height: 100%;
+	z-index: 20;
+	padding: 13% 0 0;
+	background: rgba(0,0,0,.9);
+	color: rgba(255,255,255,.9);
+}
+.game-item .hover i.fa {
+	color: rgba(255,255,255,.9);
+	font-size: .8em;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	padding: 3em 2em 2em;
+	width: 7em;
+	height: 7em;
+}
+.game-item .fa.fa-play, .game-item .fa.fa-play:before {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.game-item a:hover .hover {
+	opacity: .9;
+}
+footer{
+}
+.banner-wrap{
+	height: 350px;
+	width: 100%;
+	background-image: url(https://bps-cdn-level3.bpsgameserver.com/bgr/CasinoEuro/Common/neutral/image/2016/08/ba4f2ff86aae46fb9571d62a08b45438.jpg);
+	background-size: cover;
+
+	transform: translate3d(0px, 0px, 0px);
+	transition-duration: 0ms;
+	z-index: 1;
+	display: -ms-flexbox;
+	display: flex;
+	transition-property: transform;
+	box-sizing: content-box;
+}
+.knight{
+	height: 100%;
+	width: 40%;
+	position: absolute;
+	right: 0;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100% auto;
+	z-index: 0;
+	background-image: url(https://bps-cdn-level3.bpsgameserver.com/bgr/CasinoEuro/Common/neutral/image/2016/08/84de17c7ec804aba89ccfa66bd94ed0b.png);
+	background-size: contain;
+}
+.after-knight{
+	max-width: 62%;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.banner-wrap .content{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.text-block{
+	margin-top: 20px;
+}
+.text-block h4{
+	color: #1f294a;
+	padding: 0 0 .5em;
+	font-size: 2.571rem;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 1.4;
+	text-rendering: optimizeLegibility;
+}
+.text-block p{
+	color: #1f294a;
+	text-align: justify;
+	text-transform: none;
+	padding: 5px 0 20px;
+	font-size: 1rem;
+	text-rendering: optimizeLegibility;
+	line-height: 1.5em;
+}
+.footer-payments{
+	background: #313036;
+	padding: 1.9em 0;
+}
+.footer-payments .content, .footer-games-logo .content{
+	-ms-flex-pack: distribute;
+	justify-content: space-around;
+	display: -ms-flexbox;
+	display: flex;
+	flex-wrap: wrap;
+}
+.payment-logo-wrap img{
+	max-height: 35px;
+	height: 35px;
+	margin: 10px;
+	position: relative;
+	width: auto;
+	vertical-align: middle;
+}
+.footer-games-logo{
+	padding: 2.1714rem 0;
+	background: rgba(0,0,0,.9);
+}
+.footer-games-logo img{
+	max-width: 100%;
+	max-height: 35px;
+	height: 35px;
+	margin: 10px;
+	position: relative;
+}
+.games-wrap{
+	text-align: center;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+.emulat-games{
+	height: auto;
+	width: 1024px;
+	display: inline-block;
+	position: relative;
+}
+#displayLock{
+	display: none; width: 100%; height: 100%; z-index: 9999; position: absolute;
+}
+#preloader{
+	display: none;
+	text-align: center;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 3000;
+	background: black;
+}
+.animation-wrap {
+	width: 256px;
+	height: 256px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -128px;
+	margin-top: -138px;
+}
+.animation-wrap .number-wrap {
+	position: absolute;
+	font-size: 40px;
+	color: #01ffff;
+	font-family: arial;
+	top: 50%;
+	left: 50%;
+	margin-left: -51px;
+	margin-top: -21px;
+	width: 114px;
+	text-align: center;
+	line-height: 1;
+	font-weight: 700;
+}
+#preloaderBackground{
+	// background-image: url("img/splashscreen.jpg");   
+	background-image: url("../games/alaskanFishing/img/splashscreen.jpg");    
+	background-size: contain;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	z-index: 9999;
+	transform: translate(0px, 0px);
+	width: 1024px;
+	height: 748px;
+	display: inline-block;
+}
+.meter-wrap {
+	position: absolute;
+	height: 11px;
+	width: 50%;
+	bottom: 5%;
+	left: 0;
+	right: 0;
+	margin: auto auto;
+}
+.meter-wrap-bg-container {
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	padding: 0 12px;
+}
+.meter-wrap-bg-left, .meter-wrap-bg-bar, .meter-wrap-bg-right {
+	position: relative;
+	float: left;
+	height: 100%;
+	top: -100%;
+	border-top: 1px solid #b2c82f;
+	border-bottom: 1px solid #b2c82f;
+	background-color: #000;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.meter-wrap-bg-left {
+	-moz-border-radius: 12px 0px 0px 12px;
+	-webkit-border-radius: 12px 0px 0px 12px;
+	border-radius: 12px 0px 0px 12px;
+	border-left: 1px solid #b2c82f;
+	width: 12px;
+	right: 12px;
+	height: 100%;
+	top: 0px;
+}
+.meter-wrap-bg-bar, .meter-bg-bar {
+	float: left;
+	width: 100%;
+}
+.meter-wrap-bg-right {
+	-moz-border-radius: 0px 12px 12px 0px;
+	-webkit-border-radius: 0px 12px 12px 0px;
+	border-radius: 0px 12px 12px 0px;
+	border-right: 1px solid #b2c82f;
+	width: 12px;
+	margin-right: -12px;
+	height: 100%;
+}
+.meter-value {
+	margin-top: 2px;
+	height: 7px;
+	width: 10%;
+	// margin-left: 2px;
+	margin-left: 0px;
+	overflow: hidden;
+}
+.meter-bg-container {
+	position: relative;
+	/* padding: 0 10px; */
+	padding: 0px 13px;
+	height: 7px;
+}
+.meter-bg-bar, .meter-bg-left, .meter-bg-right {
+	position: relative;
+	float: left;
+	height: 100%;
+	top: -100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	background-color: #b2c82f;
+	-webkit-animation: gradient-anim 2s infinite linear;
+	-moz-animation: gradient-anim 2s infinite linear;
+	-o-animation: gradient-anim 2s infinite linear;
+	animation: gradient-anim 2s infinite linear;
+}
+.meter-bg-left {
+	right: 10px;
+	width: 10px;
+	height: 100%;
+	top: 0px;
+	-moz-border-radius: 10px 0px 0px 10px;
+	-webkit-border-radius: 10px 0px 0px 10px;
+	border-radius: 10px 0px 0px 10px;
+}
+.meter-bg-right {
+	width: 10px;
+	margin-right: -10px;
+	height: 100%;
+	-moz-border-radius: 0px 10px 10px 0px;
+	-webkit-border-radius: 0px 10px 10px 0px;
+	border-radius: 0px 10px 10px 0px;
+}
+.overlay{
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1040;
+	background-color: #000;
+	opacity: .5;
+}
+.modal{
+	max-width: 600px;
+	width: 50%;
+	margin: 60px auto 0 auto;
+	background: #fff;
+	position: relative;
+	z-index: 1045;
+}
+.login .modal{
+	max-width: 400px;
+}
+.modal .header {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-ms-flex-align: center;
+	align-items: center;
+	background: #213d7e;
+	padding: 1.25rem 2.5rem .9375rem 2.143rem;
+	border-bottom: 2px solid transparent;
+}
+.modal .header h2{
+	color: #fff;
+	line-height: 2.5rem;
+	font-size: 2.25rem;
+}
+.modal .header .close{
+	position: absolute;
+	font-size: 1.2rem;
+	top: 5px;
+	right: 5px;
+	color: #fff;
+	opacity: .9;
+	font-weight: 700;
+	line-height: 1;
+	cursor: pointer;
+}
+.modal .header .close:before {
+	/*content: "\e92e";*/
+}
+.modal_wrap {
+	overflow-x: hidden;
+	overflow-y: auto;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1050;
+	display: none;
+}
+.modal .modal_body{
+	margin: 1em 0 0;
+}
+.language_selector .modal_body{
+	padding: 0 .714rem 1rem;
+	text-align: center;
+}
+.language_selector ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.language_selector li {
+	display: inline-block;
+	width: 9.857rem;
+	height: 9.857rem;
+	padding: .2143rem;
+}
+.language_selector a {
+	display: -ms-flexbox;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	border: solid 1px rgba(225,222,207,.85);
+}
+.language_selector a:hover{
+	background-color: #eaeaf2;
+}
+.language_selector span {
+	-ms-flex-item-align: center;
+	-ms-grid-row-align: center;
+	align-self: center;
+	margin: 0 auto;
+}
+.language_selector .flag-title {
+	color: #000;
+	text-align: center;
+	margin-top: .714rem;
+	font-size: 1rem;
+	line-height: 1.6;
+	margin-bottom: 1.25rem;
+}
+.language_selector .flags-lg {
+	display: block;
+	margin: 0 auto;
+	height: 48px;
+	width: 48px;
+	background-image: url('/images/flag-sprite.png');
+	background-repeat: no-repeat;
+}
+.flags-lg-en {
+	background-position: 0 0;
+}
+.flags-lg-de {
+	background-position: 0 calc(-48px * 4);
+}
+.icons{
+	text-align: right;
+}
+.icons img{
+	position: relative;
+	max-width: 100%;
+	height: 35px;
+	margin: 10px;
+	vertical-align: middle;
+}
+.modal_body .input{
+	position: relative;
+	width: 100%;
+	margin: 4px 0;
+}
+.modal_body .input input{ 
+	width: 100%;
+	font-size: 1rem;
+	border-radius: 5px;
+	box-sizing: border-box;
+	outline: 0;
+	height: 34pt;
+	padding: 1.2em 2.3em 0 .5rem;
+	background-color: #f9f9f9;
+	box-shadow: none;
+	border: 1px solid #ccc;
+	color: #000;
+}
+.modal_body .input label {
+	display: inline-block;
+	margin-bottom: .5rem;
+	font-size: 1rem;
+	font-weight: 400;
+	pointer-events: none;
+	text-transform: capitalize;
+	position: absolute;
+	left: 8px;
+	top: 50%;
+	transform: translateY(-50%);
+	transition: .2s ease all;
+}
+.modal_body .input input.no-empty~label, .modal_body .input input:focus~label {
+	top: 15%;
+	font-size: .7143rem;
+	transform: none;
+}
+.login .modal_body{
+	padding: 0 1em 1em;
+}
+form .invalid_label{
+	color: #f32633;
+	line-height: 1.5;
+}
+.login .btn-success {
+	margin: 20px 0;
+	box-shadow: 0 1px 0 0 #264403;
+	color: #fff;
+	background-color: #3caf59;
+	border: 0;
+	font-size: 1.214rem;
+	box-sizing: border-box;
+	display: block;
+	width: 100%;
+	padding: .7857rem 1.286rem;
+}
+.forgot_password{
+	line-height: 1em;
+	text-align: center;
+	margin-bottom: 0.5em;
+}
+.forgot_password a{
+	color: #5f5f5f;
+	font-size: .9rem;
+	text-decoration: underline;
+}
+.menu_wrap{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 250px;
+	transform: translate(-100%, 0);
+	transition: transform .3s ease-out;
+	z-index: 1045;
+}
+.menu_wrap.open{
+	transform: translate(0, 0);
+}
+.menu_content{
+	height: 100%;
+	width: 100%;
+	background-color: #213d7e;
+	line-height: 1.5;
+	overflow-y: auto;
+	overflow-x: hidden;
+	box-shadow: inset -144px 0 6px -140px rgba(0,0,0,.3);
+}
+.menu_content ul{
+	margin-bottom: 1.25rem;
+	list-style: none;
+}
+.menu_content ul a{
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: center;
+	align-items: center;
+	width: 100%;
+	color: #fff;
+	font-size: 1em;
+	font-weight: 600;
+	text-transform: none;
+	border-bottom: 1px solid rgba(255,255,255,.5);
+	background-color: inherit;
+	padding: 1.1em 1.3em;
+	transition: background,.3s,ease;
+}
+.menu_content ul a:hover {
+	background-color: rgba(255,255,255,.2);
+}
+.btn_menu{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 43px;
+	height: 100%;
+	padding: 7px;
+}
+.btn_menu a{
+	display: inline-block;
+	height: 100%;
+	width: 100%;
+	background: transparent url(../images/menu.png) center center no-repeat;
+	background-size: cover;
+}
+.reg_wrap{
+	float: right;
+	width: calc((100% - 195px) * .4);
+	border: 1px solid #ccc;
+	background: #fff;
+	min-height: 400px;
+	margin-bottom: 65px;
+	padding-right: 30px;
+	padding-left: 30px;
+	margin-top: 10px;
+}
+.reg_wrap .field{
+	margin-top: 12px;
+}
+.reg_wrap form{
+	margin-top: 2.143rem;
+	margin-bottom: 2.143rem;
+}
+.reg_wrap .field_title{
+	width: 100%;
+	display: block;
+	color: #444;
+	margin-bottom: .3rem;
+}
+.reg_wrap .field input:not([type=radio]):not([type=checkbox]){
+	width: 100%;
+	border: 1px solid;
+	border-color: #ccc;
+	font-size: 1rem;
+	line-height: 1rem;
+	padding: .6rem;
+	background-color: #f9f9f9;
+	box-shadow: none;
+	outline: 0;
+	box-sizing: border-box;
+	border-radius: 5px;
+	font-weight: 700;
+	color: #fefdfb;
+	height: 35px;
+	color: inherit;
+}
+.reg_wrap .field select {
+	outline: 0;
+	width: 100%;
+	padding: .6rem 1.8rem .5rem .5rem;
+	border-radius: 5px;
+	background-color: #f9f9f9;
+	box-shadow: none;
+	border-color: #b7b7b7;
+	height: 35px;
+	color: inherit;
+	position: relative;
+	border-style: solid;
+	border-width: 1px;
+	font-weight: 700;
+	font-size: 1rem;
+}
+.reg_wrap .field .invalid_label{
+	display: inline-block;
+	margin: 9px 0 12px 0;
+	font-size: 1rem;
+	line-height: 1.429rem;
+	font-family: inherit;
+}
+.col-3{
+	float: left;
+	width: 50%;
+}
+.col-3:first-of-type {
+	padding-right: 5px;
+}
+.col-3:last-of-type {
+	padding-left: 5px;
+}
+.col-4{
+	float: left;
+	width: 66.6%;
+	padding-right: 5px;
+}
+.col-2{
+	float: left;
+	width: 33.3%;
+	padding-left: 5px;
+}
+.radio-group label input{
+	margin-right: 0.3em;
+}
+.radio-group label {
+	margin-right: .7em;
+}
+.checkbox-group label{
+	position: relative;
+	line-height: 1.5;
+	margin: 0 0 .5em 2em;
+	display: inline-block;
+	cursor: pointer;
+}
+.checkbox-group input{
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	opacity: 0;
+	position: absolute;
+}
+input[type=checkbox]+label:before {
+	position: absolute;
+	top: 0;
+	left: -2em;
+	width: 1.25em;
+	height: 1.25em;
+	margin: 0 .25em 0 0;
+	border: 1px solid #818890;
+	font-family: FontAwesome;
+	line-height: 1.3em;
+	text-align: center;
+	content: "\00a0";
+}
+input[type=checkbox]:checked+label:before {
+	content: "\f00c";
+}
+.reg_wrap .btn{
+	box-shadow: 0 1px 0 0 #2b8142;
+	color: #fff;
+	background-color: #3caf59;
+	display: inline-block;
+	line-height: 1.286rem;
+	text-align: center;
+	white-space: nowrap;
+	border: 1px solid transparent;
+	padding: .7857rem 1.286rem;
+	font-size: 1.214rem;
+	border-radius: 5px;
+	transition: all .2s ease-in-out;
+	width: 100%;
+}
+.reg_wrap .checkbox-group{
+	margin-top: 24px;
+}
+.login_icon_wrap{
+	display: none;
+	font-family: icon-font;
+	speak: none;
+	font-style: normal;
+	font-weight: 400;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.logo-user {
+	display: block;
+	font-size: 1.55rem !important;
+	padding: 10px 12px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	color: #fede00;
+	background: 0 0;
+}
+@media (max-width: 1306px){
+	header .logo{
+		margin-left: 3.3rem;
+	}
+}
+@media screen and (max-width: 1197px){
+	.games-section .game-item {
+		width: 25%;
+	}
+	.banner-wrap{
+		background-image: url(https://bps-cdn-level3.bpsgameserver.com/bgr/CasinoEuro/Common/neutral/image/2016/03/4a40712da85944bfb4009d4ec5215f68.jpg);
+		background-size: cover;
+		background-position: 50% 0%;
+	}
+	.knight{
+		display: none;
+	}
+}
+@media screen and (max-width:1024px) {
+	.banner-wrap {
+		height: 250px;
+	}
+	.knight{
+		height: 220px;
+	}
+	.visible-desktop{
+		display: none !important;
+	}
+	.main-nav {
+		overflow: hidden;
+		-webkit-overflow-scrolling: touch;
+		table-layout: fixed;
+		width: 100%;
+		display: table;
+	}
+	.main-nav .main-nav-wrap {
+		width: 100%;
+		overflow-x: auto;
+		display: table-cell;
+	}
+	.reg_wrap{
+		width: 50%;
+	}
+	.account-btn{
+		display: none;
+	}
+	.login_icon_wrap{
+		display: inline-block;
+	}
+	.account-btn, .language_wrap {
+		margin-right: 3.571rem;
+	}
+}
+@media screen and (max-width: 767px){
+	.knight{
+		margin: 0 auto;
+		width: 35%;
+		bottom: 50px;
+	}
+	.banner-wrap{
+		height: 220px;
+	}
+	.reg_wrap{
+		width: 100%;
+	}
+	header .logo{
+		position: absolute;
+		left: 50%;
+		margin-left: -73px;
+	}
+	.language_wrap{
+		display: none;
+	}
+	.reg_wrap {
+		padding: 0;
+		border: 0;
+	}
+}
+@media screen and (max-width: 700px){
+	.games-section .game-item {
+		width: 33.3%;
+	}
+	.main-nav a {
+		font-size: 1em;
+	}
+}
+@media screen and (max-width: 548px){
+	.games-section .game-item {
+		width: 50%;
+	}
+	.games-section .game-item a {
+		overflow: hidden;
+	}
+	.reg_wrap form{
+		margin: 0;
+	}
+	.modal{
+		width: 100%;
+	}
+}

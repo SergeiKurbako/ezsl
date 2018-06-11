@@ -1,0 +1,172 @@
+body{
+	width: 100%;
+}
+.menu_wrap{
+	position: absolute;
+	left: 10px;
+	top: 10px;
+}
+.menu_btn {
+	display: inline-block;
+	font-size: 16px;
+	font-family: "Proxima Nova Cn Lt";
+	color: rgb(255, 255, 255);
+	text-transform: uppercase;
+	border-radius: 22px;
+	background-image: -moz-linear-gradient( 90deg, rgb(12,105,234) 0%, rgb(64,203,253) 85%, rgb(67,205,253) 100%);
+	background-image: -webkit-linear-gradient( 90deg, rgb(12,105,234) 0%, rgb(64,203,253) 85%, rgb(67,205,253) 100%);
+	background-image: -ms-linear-gradient( 90deg, rgb(12,105,234) 0%, rgb(64,203,253) 85%, rgb(67,205,253) 100%);
+	box-shadow: 0px 17px 24px 0px rgba(0, 0, 0, 0.33), 0px -4px 15px 0px rgba(72, 173, 244, 0.5), inset 0px 2px 3px 0px rgba(255, 255, 255, 0.1);
+	width: 36px;
+	height: 36px;
+	text-align: center;
+	line-height: 36px;
+	float: left;
+	cursor: pointer;
+	-ms-user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+	position: relative;
+}
+.menu_btn:before{
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 36px;
+	height: 36px;
+	background: transparent url('../images/menu.png') 0 0 no-repeat;
+	background-size: cover;
+}
+.menu_elements{
+	display: inline-block;
+	width: 158px;
+	background: #535351;
+	box-shadow: 0px 1px 1px 0px rgba(255, 255, 255, 0.07), inset 0px 3px 8px 0px rgba(0, 0, 0, 0.25);
+	height: 36px;
+	border-top-left-radius: 36px;
+	border-bottom-left-radius: 36px;
+	float: left;
+	margin-right: -20px;
+	overflow: hidden;
+	white-space: nowrap;
+	transition: width .5s ease;
+	transition: all .5s ease;
+}
+.menu_elements.close{
+	width: 0;
+	padding: 0;
+}
+.menu_elements ul{
+	margin: 0px;
+	padding-left: 10px;
+	padding-right: 20px;
+	list-style: none;
+}
+.menu_elements li{
+	display: inline-block;
+	margin: 0px;
+	padding: 0;
+	list-style: none;
+	width: 42px;
+	height: 36px;
+	padding: 8px 11px;
+	cursor: pointer;
+	float: left;
+}	
+.menu_elements li img{
+	width: 21px;
+	height: auto;
+	transition: all .3s ease;
+}
+.menu_elements li:hover img{
+	opacity: 0.8;
+}
+.btn_1{
+	background: transparent url('../images/icon_22.svg') 50% 50% no-repeat;
+	-webkit-background-size: 17px;
+	background-size: 17px;
+}
+.btn_1.active{
+	background: transparent url('../images/icon_2.svg') 50% 50% no-repeat;
+	-webkit-background-size: 21px;
+	background-size: 21px;
+}
+.btn_2{
+	background: transparent url('../images/icon_33.svg') 50% 50% no-repeat;
+	-webkit-background-size: 21px;
+	background-size: 21px;
+}
+.btn_2.active{
+	background: transparent url('../images/icon_3.svg') 50% 50% no-repeat;
+	-webkit-background-size: 21px;
+	background-size: 21px;
+}
+.btn_3{
+	background: transparent url('../images/icon_4.svg') 50% 50% no-repeat;
+	-webkit-background-size: 21px;
+	background-size: 21px;
+}
+.btn_3.active{
+	background: transparent url('../images/icon_44.svg') 50% 50% no-repeat;
+	-webkit-background-size: 21px;
+	background-size: 21px;
+}
+@media screen and (max-width: 760px) {
+	.menu_elements li{
+		width: 35px;
+		height: 30px;
+		padding: 6px 8px;
+	}	
+	.menu_elements li img{
+		width: 18px;
+		height: auto;
+		transition: all .3s ease;
+	}
+	.menu_btn {
+		width: 30px;
+		height: 30px;
+		line-height: 30px;
+	}
+	.menu_btn:before{
+		width: 30px;
+		height: 30px;
+	}
+	.menu_elements{
+		width: 137px;
+		height: 30px;
+		border-top-left-radius: 30px;
+		border-bottom-left-radius: 30px;
+	}
+	.btn_1{
+	background: transparent url('../images/icon_22.svg') 50% 50% no-repeat;
+	-webkit-background-size: 16px;
+	background-size: 16px;
+}
+.btn_1.active{
+	background: transparent url('../images/icon_2.svg') 50% 50% no-repeat;
+	-webkit-background-size: 20px;
+	background-size: 20px;
+}
+.btn_2{
+	background: transparent url('../images/icon_33.svg') 50% 50% no-repeat;
+	-webkit-background-size: 20px;
+	background-size: 20px;
+}
+.btn_2.active{
+	background: transparent url('../images/icon_3.svg') 50% 50% no-repeat;
+	-webkit-background-size: 20px;
+	background-size: 20px;
+}
+.btn_3{
+	background: transparent url('../images/icon_4.svg') 50% 50% no-repeat;
+	-webkit-background-size: 20px;
+	background-size: 20px;
+}
+.btn_3.active{
+	background: transparent url('../images/icon_44.svg') 50% 50% no-repeat;
+	-webkit-background-size: 20px;
+	background-size: 20px;
+}
+}

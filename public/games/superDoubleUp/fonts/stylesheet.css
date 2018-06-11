@@ -1,0 +1,33 @@
+﻿@font-face {
+  font-family: 'JoystixMonospace-Regular';
+  src: url('JoystixMonospace-Regular.eot?#iefix') format('embedded-opentype'),  url('JoystixMonospace-Regular.woff') format('woff'), url('JoystixMonospace-Regular.ttf')  format('truetype'), url('JoystixMonospace-Regular.svg#JoystixMonospace-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+    font-family: 'Xenia';
+    src: url('XeniaBoldCyrillic.eot');
+    src: url('XeniaBoldCyrillic.eot?#iefix') format('embedded-opentype'),
+        url('XeniaBoldCyrillic.woff2') format('woff2'),
+        url('XeniaBoldCyrillic.woff') format('woff'),
+        url('XeniaBoldCyrillic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'TR Motor';
+    src: url('TRMotorPlain.eot');
+    src: url('TRMotorPlain.eot?#iefix') format('embedded-opentype'),
+        url('TRMotorPlain.woff2') format('woff2'),
+        url('TRMotorPlain.woff') format('woff'),
+        url('TRMotorPlain.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'DeterminationMonoRUSBYLYAJK';
+  src: url('DeterminationMonoRUSBYLYAJK.eot?#iefix') format('embedded-opentype'),  url('DeterminationMonoRUSBYLYAJK.woff') format('woff'), url('DeterminationMonoRUSBYLYAJK.ttf')  format('truetype'), url('DeterminationMonoRUSBYLYAJK.svg#DeterminationMonoRUSBYLYAJK') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

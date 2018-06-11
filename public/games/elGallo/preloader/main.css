@@ -1,0 +1,31 @@
+.preloader{
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 3000;
+	background: black;
+	margin: 0 auto;	 
+}
+.preloader .chicken{
+	background: transparent url('img/logo.png') 50% 50% no-repeat;
+	background-size: contain;
+	height: 45%;
+	margin-top: calc(100vh * 0.09);
+	margin-bottom: calc(100vh * 0.12);
+}
+.preloader .load_gif{
+	background: transparent url('img/loader.gif') 50% 50% no-repeat;
+	background-size: contain;
+	height: 13%;
+}
+@media screen and (max-width:992px) {
+	.preloader .chicken, .preloader .load_gif{
+		margin: 0;
+		width: 50%;
+		height: 100%;
+		float: left;
+		background-size: auto;
+	}
+}

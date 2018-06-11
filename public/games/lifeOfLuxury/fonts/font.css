@@ -1,0 +1,9 @@
+@font-face {
+	font-family: 'Bauhaus 93';
+	src: url('../fonts/Bauhaus93.eot');
+	src: url('../fonts/Bauhaus93.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/Bauhaus93.woff') format('woff'),
+	url('../fonts/Bauhaus93.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
